@@ -28,17 +28,8 @@ main {
   width: 300px;
   background-color: rgb(56, 60, 63);
   font-size: 2rem;
-  text-align: center;
-  grid-template-areas:
-    "status"
-    "img"
-    "title"
-    "occupation"
-    "offer"
-    "contact";
+  text-align: center;  
 }
-
-
 
 h1 {
   grid-area: title;
@@ -55,4 +46,110 @@ p {
 img {
   border-radius: 50%;
   border: white .2rem outset;
+  align-self: center;
+}
+
+#status {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px 0;
+}
+
+#occupation {
+  background-color: #01ff9e;
+  padding: 18px 0;
+}
+
+#brand {
+  background-color: #01ff9e;
+  padding: 18px;
+}
+
+#name {
+  color: white;
+  padding-left: 40px;
+  font-size: 30px;
+}
+
+#offer {
+  color: white;
+}
+
+#contact {
+  display: flex;
+}
+
+#contact > p {
+  height: 60px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact > p:first-child {
+  background-color: #1ec283;
+}
+
+#contact > p:last-child {
+  background-color: #01ff9e;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    display: grid;
+    text-align: left;
+    width: 500px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "status name"
+      "img occupation"
+      "img brand"
+      "contact offer";
+  }
+
+#status {
+  text-align: left;
+}
+
+img {
+  grid-area: img;
+  margin: 0 auto;
+}
+
+#name {
+  grid-area: name;
+  background-color: #01ff9e;
+  color: black;
+}
+
+#occupation {
+  padding-left: 20px;
+}
+
+#brand > p {
+  border-left: rgb(56, 60, 63) 4px solid;
+  padding: 0 20px 0 8px;
+  font-size: 1.6rem;
+}
+
+#contact {
+  grid-area: contact;
+}
+
+#offer {
+  padding-left: 20px;
+  color: white;
+  background-color: ;
+}
+
+#contact > p:first-child {
+  background-color: rgb(56, 60, 63);
+}
+
+#contact > p:last-child {
+  background-color: rgb(56, 60, 63);
 }
